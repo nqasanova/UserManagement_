@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,39 +16,14 @@ namespace UserManagement.ApplicationLogic
             Console.Write("Please enter user's name : ");
             string firstName = Console.ReadLine();
 
-            /*while(!UserValidation.IsValidFirstName(firstName))
-            {
-                Console.WriteLine("The name you have entered is incorrect. Your name's first letter should be capitalized, your name should only contain letters, and your name's length should be greater than 3 and less than 30.");
-                firstName = Console.ReadLine();
-            }*/
-
             Console.Write("Please enter user's last name : ");
             string lastName = Console.ReadLine();
-
-            /*while (!UserValidation.IsValidLastName(lastName))
-            {
-                Console.WriteLine("The last name you have entered is incorrect. Your last name's first letter should be capitalized, your last name should only contain letters, and your last name's length should be greater than 5 and less than 20.");
-                lastName = Console.ReadLine();
-            }*/
 
             Console.Write("Please enter user's email : ");
             string email = Console.ReadLine();
 
-            /*while (!UserValidation.IsValidEmail(email) && UserValidation.IsUserExist(email))
-            {
-                Console.WriteLine("The email you have entered is incorrect. Your email should only contain letters and numbers, your email's length should be greater than 10 and less than 30, your email should contain '@', and your email's domain should be 'code.edu.az'");
-                email = Console.ReadLine();
-            }*/
-
             Console.Write("Please enter user's password : ");
             string password = Console.ReadLine();
-
-            /*while (!UserValidation.IsValidPassword(password, confirmPassword))
-            {
-                Console.WriteLine("The email you have entered is incorrect. Your email should only contain letters and numbers, your email's length should be greater than 10 and less than 30, your email should contain '@', and your email's domain should be 'code.edu.az'");
-                password = Console.ReadLine();
-                confirmPassword = Console.ReadLine();
-            }*/
 
             Console.Write("Please enter user's confirm password : ");
             string confirmPassword = Console.ReadLine();
