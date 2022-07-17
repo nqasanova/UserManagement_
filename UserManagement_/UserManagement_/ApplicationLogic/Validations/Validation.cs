@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,15 +18,7 @@ namespace UserManagement.ApplicationLogic.Validations
 
             return regex.IsMatch(text);
         }
-
-        public static bool IsLengthBetween(string text, int start)
-        {
-            string pattern = @"[a-zA-Z]{8, }";
-            Regex regex = new Regex(pattern);
-
-            return regex.IsMatch(text);
-        }
-
+        
         public static bool IsFirstLetterUpperCase(string text)
         {
             string pattern = @"^[A-Z]";
