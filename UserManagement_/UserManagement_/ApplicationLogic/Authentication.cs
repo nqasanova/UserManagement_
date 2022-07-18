@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UserManagement.ApplicationLogic.Validations;
 using UserManagement.Database.Models;
 using UserManagement.Database.Repository;
@@ -51,7 +46,7 @@ namespace UserManagement.ApplicationLogic
                 if (email == "admin@gmail.com" && password == "123321")
                 {
                     Console.WriteLine("Welcome!");
-                    Console.WriteLine(UserValidation.GetUser(email));
+                    Console.WriteLine(UserRepository.GetUser(email));
 
                     Console.WriteLine("/show-users");
                     string command = Console.ReadLine();
@@ -64,7 +59,7 @@ namespace UserManagement.ApplicationLogic
                     else
                     {
                         Console.WriteLine("Welcome!");
-                        Console.WriteLine(UserValidation.GetUser(email));
+                        Console.WriteLine(UserRepository.GetUser(email));
                     }
                 }
 
