@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using UserManagement.Database.Models;
 using UserManagement.Database.Repository;
 
