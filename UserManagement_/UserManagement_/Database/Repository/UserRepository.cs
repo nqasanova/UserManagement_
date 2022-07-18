@@ -24,7 +24,6 @@ namespace UserManagement.Database.Repository
         {
             return Users;
         }
-
         public static bool GetUser(string email)
         {
             foreach (User user in UserRepository.Users)
