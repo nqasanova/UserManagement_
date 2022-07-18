@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,10 @@ namespace UserManagement.Database.Repository
 {
     internal class UserRepository
     {
-        public static List<User> Users { get; set; } = new List<User>();
+        public static List<User> Users { get; set; } = new List<User>()
+        {
+            new User("Super", "Admin", "admin@gmail.com", "123321")
+        };
 
         public static User AddUser(string firstName, string lastName, string email, string password)
         {
@@ -17,13 +20,9 @@ namespace UserManagement.Database.Repository
             Users.Add(user);
             return user;
         }
-
-        public static void GetAll()
+        public static List<User> GetAll()
         {
-            foreach (User user in Users)
-            {
-                Console.WriteLine($"{user.FirstName} {user.LastName} {user.Email} {user.Password} {user._registerTime}");
-            }
+            return Users;
         }
 
         public static bool GetUser(string email)
@@ -32,7 +31,7 @@ namespace UserManagement.Database.Repository
             {
                 if (user.Email == email)
                 {
-                    Console.WriteLine($" Name : {user.FirstName}, Last name : {user.LastName}, Email : {user.Email}, Password : {user.Password}, Registration Time : {user._registerTime}");
+                    Console.WriteLine($" ID: {user.ID}, Name : {user.FirstName}, Last name : {user.LastName}, Email : {user.Email}, Password : {user.Password}, Registration Time : {user.RegisterationTime}");
                     return true;
                 }
             }
