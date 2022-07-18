@@ -11,14 +11,14 @@ namespace UserManagement.ApplicationLogic.Validations
 {
     public class Validation
     {
-        public static bool IsLengthBetween(string text, int start, int end)
+        public static bool IsLengthBetween(string text)
         {
             string pattern = @"[a-zA-Z]{3, 30}";
             Regex regex = new Regex(pattern);
 
             return regex.IsMatch(text);
         }
-        
+
         public static bool IsFirstLetterUpperCase(string text)
         {
             string pattern = @"^[A-Z]";
