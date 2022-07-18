@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 using UserManagement.Database.Models;
 using UserManagement.Database.Repository;
 
@@ -8,7 +8,7 @@ namespace UserManagement.ApplicationLogic.Validations
     {
         public static bool IsValidFirstName(string firstName)
         {
-            if (Validation.IsLengthBetween(firstName, 3, 30) &
+            if (Validation.IsLengthBetween(firstName) &
                 Validation.IsNumberExists(firstName) &
                 Validation.IsFirstLetterUpperCase(firstName))
             {
@@ -21,7 +21,7 @@ namespace UserManagement.ApplicationLogic.Validations
 
         public static bool IsValidLastName(string lastName)
         {
-            if (Validation.IsLengthBetween(lastName, 5, 20) &
+            if (Validation.IsLengthBetween(lastName) &
                 Validation.IsNumberExists(lastName) &
                 Validation.IsFirstLetterUpperCase(lastName))
             {
@@ -33,7 +33,7 @@ namespace UserManagement.ApplicationLogic.Validations
         }
         public static bool IsValidEmail(string email)
         {
-            if (Validation.IsLengthBetween(email, 10, 30) &
+            if (Validation.IsValidEmailLength(email) &
                 Validation.IsNumberAndLetters(email) &
                 Validation.IsEmailDomain(email) &
                 Validation.IsEmailUnique(email))
@@ -46,9 +46,9 @@ namespace UserManagement.ApplicationLogic.Validations
         }
         public static bool IsValidPassword(string password)
         {
-            if (Validation.IsLetterUpperAndLower(password) &
-                Validation.IsNumberExists(password) &
-                Validation.IsLengthBetween(password, 8))
+            if (Validation.IsValidPasswordLength(password) &
+                Validation.IsLetterUpperAndLower(password) &
+                Validation.IsNumberExists(password))
             {
                 return true;
             }
