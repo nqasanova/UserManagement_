@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UserManagement.ApplicationLogic;
 
 namespace UserManagement
@@ -7,6 +7,8 @@ namespace UserManagement
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome!");
+            Console.WriteLine();
             Console.WriteLine("Available Commands : ");
             Console.WriteLine("/register");
             Console.WriteLine("/login");
@@ -29,6 +31,7 @@ namespace UserManagement
 
                 else if (command == "/exit")
                 {
+                    Console.WriteLine("Thank you for ousing our application. Bye!");
                     break;
                 }
 
